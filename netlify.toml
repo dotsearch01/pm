@@ -1,0 +1,5 @@
+# Netlify Configuration for Poonia Movers
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

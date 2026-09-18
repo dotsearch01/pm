@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2a2a"/>
+      <stop offset="100%" stop-color="#cc0000"/>
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2430"/>
+      <stop offset="100%" stop-color="#0b0f17"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Circle for crisp tab display -->
+  <rect width="64" height="64" rx="14" fill="#0b1120"/>
+  <!-- 3D Isometric Moving Box Logo Mark -->
+  <!-- Top Face (Charcoal Black) -->
+  <polygon points="32,10 52,21 32,32 12,21" fill="#2d3748" stroke="#4a5568" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Left Face (Deep Slate) -->
+  <polygon points="12,21 32,32 32,54 12,43" fill="#1a202c" stroke="#2d3748" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Right Face (Vibrant Coral Red) -->
+  <polygon points="32,32 52,21 52,43 32,54" fill="url(#redGrad)" stroke="#b91c1c" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- Cutout Truck / Package Door on Red Face -->
+  <polygon points="37,38 47,32 47,45 37,50" fill="#ffffff" opacity="0.95"/>
+  <!-- Inner Detail -->
+  <polygon points="40,40 45,37 45,45 40,48" fill="url(#redGrad)"/>
+</svg>

@@ -1,0 +1,26 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/transport-services-in-jaipur",
+      "destination": "/jaipur-transport-services/",
+      "permanent": true
+    },
+    {
+      "source": "/transport-services-in-jaipur/",
+      "destination": "/jaipur-transport-services/",
+      "permanent": true
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "status": 404,
+      "dest": "/404.html"
+    }
+  ]
+}

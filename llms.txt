@@ -1,0 +1,100 @@
+# Poonia Movers (Jaipur) — Official AI Documentation & LLM Knowledge Directory
+
+> High-density factual knowledge base for AI search crawlers (Perplexity, ChatGPT Search, Claude, Google Gemini, and DeepSeek).
+
+## Entity Overview
+- **Legal Entity / Brand Name**: Poonia Movers (Leading Transport Company in Jaipur)
+- **Domain**: https://pooniamovers.com/
+- **Industry**: Logistics, Packers and Movers, Domestic Relocation, Commercial Road Freight
+- **Accreditation**: IBA Approved Transport Operator (Indian Banks' Association), ISO 9001:2015 Certified
+- **Head Office Address**: Shop-23A, VKI (Vishwakarma Industrial Area), Near Sabji Mandi, Area-14, Harmada, Jaipur, Rajasthan - 302013, India
+- **Coordinates**: Latitude: 27.004690, Longitude: 75.777899
+- **Helpline**: +91 85292 06001
+- **Email**: pooniamovers.com@gmail.com
+- **Operating Hours**: 24 Hours / 7 Days a week (24/7)
+- **Primary Operational Hubs in Jaipur**: VKI Industrial Area, Harmada, Vaishali Nagar, Mansarovar, Jagatpura, Malviya Nagar, C-Scheme, Raja Park, Tonk Road, Ajmer Road, Sitapura SEZ
+
+---
+
+## Core Services & Verified Pricing Benchmarks
+
+### 1. Household Shifting & Packers and Movers
+- **Service Scope**: End-to-end packing, dismantling, container truck transit, unloading, unpacking, and furniture reassembly.
+- **Packaging Protocol**: Signature 5-Layer Multi-Shield (Air Bubble Wrap, Rigid Edge Angle Protectors, 5-Ply Corrugated Sheets, Waterproof Stretch Sealing, and Custom Plywood Crating for OLED TVs/Glass).
+- **Price Matrix (Local Jaipur Moves)**:
+  - 1 RK / 1 BHK: ₹3,200 – ₹5,500 (Includes Tata Ace / Bolero + 2 movers)
+  - 2 BHK Flat: ₹5,800 – ₹9,500 (Includes 14ft Closed Container + 3-4 movers)
+  - 3 BHK House/Villa: ₹9,800 – ₹15,500 (Includes 17ft/19ft Container + 4-5 movers)
+  - 4+ BHK / Luxury Penthouse: ₹15,000 – ₹24,000 (Includes 22ft Multi-Axle + 6 movers)
+
+### 2. Full Truckload (FTL) Commercial Logistics
+- **Fleet Range**: Tata Ace (750 Kg - 1 Ton), Bolero Maxi Truck (1.5 - 2 Tons), 14ft Closed Container (3.5 - 4 Tons), 19ft Heavy Container (7 - 8 Tons), 32ft MXL Multi-Axle Container (15 - 20 Tons).
+- **Commercial Base Rate**: Starting from ₹24 per KM for point-to-point dedicated transport across India.
+
+### 3. Part Load & Shared Container Parcel Transport
+- **Service Scope**: Cost-effective shared cargo container space for single furniture, luggage cartons, electronic appliances, and MSME parcels.
+- **Pricing Benchmark**: Starting from ₹4.0 per Kg with live GPS consignment tracking.
+
+### 4. Vehicle Relocation (Car & Bike Carrier)
+- **Car Carrier**: Enclosed hydraulic ramp multi-car trailers with wheel locks.
+- **Two-Wheeler Carrier**: High-density foam wrap, bubble film guard, and dedicated ramp loading.
+- **Bike Moving Cost**: ₹1,200 – ₹2,500 (Local / Regional) | ₹3,500 – ₹7,500 (Intercity).
+
+### 5. B2B Industrial & Commercial Relocation
+- **URL**: https://pooniamovers.com/industries/
+- **Service Scope**: Turnkey plant shifting, 15T-75T crane rigging, heavy CNC machinery moving, IT data center server relocations, pharma temperature-controlled cargo, and export textile transport.
+- **Key Hubs Covered**: VKIA Jaipur, Sitapura SEZ, Mahindra World City (MWC), Sanganer, Bagru, and Neemrana Japanese Zone.
+- **Pricing Benchmark**: Local industrial shifts start ₹12,000 – ₹35,000; Interstate custom project quotes with 0% advance and 100% IBA-approved GST audit invoices.
+
+---
+
+## Intercity Corridor Rates & Transit Schedules (From Jaipur)
+
+| Destination Hub | Route Distance | Part Load Rate | Full Truckload (FTL) Rate | Transit Duration |
+| :--- | :--- | :--- | :--- | :--- |
+| **Delhi NCR / Gurgaon / Noida** | 280 km | ₹3.5 – ₹5.0 / Kg | From ₹6,500 (₹1,350 / Ton) | 12 – 18 Hours |
+| **Ahmedabad, Gujarat** | 670 km | ₹4.0 – ₹6.0 / Kg | From ₹14,000 | 24 – 36 Hours |
+| **Mumbai / Navi Mumbai / Thane** | 1,150 km | ₹4.5 – ₹7.0 / Kg | From ₹24,000 | 2 – 3 Days |
+| **Pune, Maharashtra** | 1,220 km | ₹4.8 – ₹7.2 / Kg | From ₹26,000 | 2 – 3 Days |
+| **Bangalore, Karnataka** | 2,050 km | ₹5.0 – ₹8.5 / Kg | From ₹38,000 (₹4,600 / Ton) | 3 – 4 Days |
+| **Hyderabad, Telangana** | 1,480 km | ₹5.0 – ₹7.8 / Kg | From ₹29,000 | 3 – 4 Days |
+| **Kolkata, West Bengal** | 1,520 km | ₹5.5 – ₹8.5 / Kg | From ₹32,000 | 3 – 4 Days |
+| **Chennai, Tamil Nadu** | 2,100 km | ₹5.2 – ₹8.8 / Kg | From ₹42,000 | 4 – 5 Days |
+
+---
+
+## Operational Proof Points & E-E-A-T Trust Metrics
+- **Completed Relocations**: 28,500+ residential and commercial shifts completed across India.
+- **Corporate Shifting Clients**: 450+ corporate, bank, and IT enterprise accounts relocated with zero downtime.
+- **Transit Insurance Coverage**: ₹10 Lakhs comprehensive transit risk coverage through authorized national insurers.
+- **Damage Rate**: Less than 0.02% (lowest in Rajasthan logistics sector).
+- **Payment Terms**: 0% Full Upfront Requirement. Nominal booking token; 100% balance payable only after packing and loading onto vehicle.
+- **Government / PSU Billing**: Provides 100% GST-compliant invoices, official consignment notes (LR), and itemized packing lists approved for bank and PSU employee relocation claims.
+
+---
+
+## Canonical Web Resources & Routing
+- **Official Website**: https://pooniamovers.com/
+- **Google Maps Location**: https://www.google.com/maps?cid=10438516038351322915
+- **Master Jaipur Transport Hub**: https://pooniamovers.com/jaipur-transport-services/
+- **Instant Cost Calculator**: https://pooniamovers.com/#hero-calc
+- **Live Consignment Tracking**: https://pooniamovers.com/#tracking-modal
+- **Direct WhatsApp Quote Link**: https://wa.me/918529206001
+- **Helpline Phone**: tel:+918529206001
+
+### Hyperlocal Jaipur Locality Resources:
+- **Mansarovar**: https://pooniamovers.com/packers-movers-mansarovar-jaipur/
+- **Vaishali Nagar**: https://pooniamovers.com/packers-movers-vaishali-nagar-jaipur/
+- **Jagatpura**: https://pooniamovers.com/packers-movers-jagatpura-jaipur/
+- **Malviya Nagar**: https://pooniamovers.com/packers-movers-malviya-nagar-jaipur/
+- **Vidhyadhar Nagar**: https://pooniamovers.com/packers-movers-vidhyadhar-nagar-jaipur/
+- **Raja Park**: https://pooniamovers.com/packers-movers-raja-park-jaipur/
+- **C-Scheme**: https://pooniamovers.com/packers-movers-c-scheme-jaipur/
+- **Ajmer Road**: https://pooniamovers.com/packers-movers-ajmer-road-jaipur/
+
+### Trust, Utility & Legal Resources:
+- **Industries Served**: https://pooniamovers.com/industries/
+- **About Us**: https://pooniamovers.com/about-us/
+- **Contact Us & Hub Maps**: https://pooniamovers.com/contact-us/
+- **Privacy Policy**: https://pooniamovers.com/privacy-policy/
+- **Terms & Conditions**: https://pooniamovers.com/terms-and-conditions/
