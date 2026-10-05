@@ -1260,6 +1260,44 @@ Turnkey factory shifting, CNC machinery rigging, IT data center transport, and t
 <h2>Transparent Pricing — Zero Hidden Clauses on Moving Day</h2>
 <p>No sudden toll surcharges, no stair fees, no surprises. What Poonia Movers quotes is what you pay.</p>
 </div>
+<section class="section section-padded" id="fare-calculator-section">
+<div class="container-wide">
+<div class="fare-calculator" id="pm-fare-calculator">
+<h2>🧮 Instant Moving Cost Calculator</h2>
+<p>Get a rough estimate in 10 seconds. Final quote confirmed on WhatsApp after a free video survey — <strong>0% advance required</strong>.</p>
+<div class="fc-grid">
+<div class="fc-field">
+<label>Move type</label>
+<div class="fc-radio-row">
+<label class="fc-radio"><input type="radio" name="fc-type" value="local" checked> 🏠 Local (within Jaipur)</label>
+<label class="fc-radio"><input type="radio" name="fc-type" value="intercity"> 🛣️ Intercity</label>
+</div>
+</div>
+<div class="fc-field" id="fc-dest-wrap" style="display:none">
+<label for="fc-dest">Destination</label>
+<select id="fc-dest"></select>
+</div>
+</div>
+<div class="fc-grid">
+<div class="fc-field">
+<label for="fc-size">Home / office size</label>
+<select id="fc-size">
+<option value="1rk">1 RK</option>
+<option value="1bhk" selected>1 BHK</option>
+<option value="2bhk">2 BHK</option>
+<option value="3bhk">3 BHK</option>
+<option value="4bhk">4+ BHK / Villa</option>
+<option value="office">Office</option>
+</select>
+</div>
+<div class="fc-field" style="display:flex;align-items:flex-end">
+<button id="fc-btn" type="button">Calculate my cost →</button>
+</div>
+</div>
+<div id="fc-result" style="display:none" aria-live="polite"></div>
+</div>
+</div>
+</section>
 <!-- Pricing Tab Switcher -->
 <div class="pricing-tabs-wrapper">
 <div class="pricing-filter-pills" role="tablist">
@@ -2665,5 +2703,6 @@ id="faq">
 <a class="smc-call" href="tel:+918529206001">📞 Call: +91 85292 06001</a>
 <a class="smc-wa" href="https://wa.me/918529206001?text=Hi%20Poonia%20Movers%2C%20I%20need%20a%20moving%20quote%20in%20Jaipur" target="_blank" rel="noopener">💬 WhatsApp Quote</a>
 </div>
+<script defer src="js/fare-calculator.js"></script>
 </body>
 </html>

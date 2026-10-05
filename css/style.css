@@ -7589,3 +7589,54 @@ input.input-error:focus,select.input-error:focus{outline:none;box-shadow:0 0 0 3
   .hero-stat strong{font-size:1.1rem;}
   .hero-price-badge{font-size:.95rem;padding:8px 16px;}
 }
+
+/* ============ FARE CALCULATOR (2026-10-05) ============ */
+.fare-calculator{background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:28px;margin:32px 0;}
+.fare-calculator h2{margin-top:0;}
+.fc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.fc-field label{display:block;font-weight:700;margin-bottom:8px;font-size:.9rem;}
+.fc-field select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;background:#fff;min-height:48px;}
+.fc-radio-row{display:flex;gap:12px;}
+.fc-radio{flex:1;display:flex;align-items:center;gap:8px;padding:12px;border:2px solid #e2e8f0;border-radius:10px;cursor:pointer;font-weight:600;background:#fff;}
+.fc-radio input{width:20px;height:20px;accent-color:#16a34a;}
+.fc-radio:has(input:checked){border-color:#16a34a;background:#f0fdf4;}
+#fc-btn{width:100%;padding:14px;font-size:1.05rem;font-weight:800;background:#16a34a;color:#fff;border:none;border-radius:10px;cursor:pointer;min-height:52px;}
+#fc-btn:hover{background:#15803d;}
+.fc-card{background:#fff;border:2px solid #16a34a;border-radius:12px;padding:20px;margin-top:16px;text-align:center;}
+.fc-title{font-weight:600;color:#475569;margin:0 0 8px;}
+.fc-price{font-size:2rem;font-weight:800;color:#16a34a;margin:0 0 8px;}
+.fc-meta{color:#475569;margin:0 0 4px;}
+.fc-note{font-size:.85rem;color:#64748b;margin:0 0 12px;}
+.fc-cta .btn-call{display:inline-block;}
+@media (max-width:640px){.fc-grid{grid-template-columns:1fr;}.fare-calculator{padding:20px 16px;}.fc-price{font-size:1.6rem;}}
+
+/* ============ TRUCK RATE CARDS (2026-10-05) ============ */
+.truck-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:24px 0;}
+.truck-card{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px;text-align:center;transition:transform .2s,box-shadow .2s;}
+.truck-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(0,0,0,.08);}
+.truck-card .truck-icon{font-size:2.4rem;}
+.truck-card h3{margin:10px 0 4px;font-size:1.1rem;}
+.truck-card .truck-cap{color:#64748b;font-size:.85rem;margin:0 0 10px;}
+.truck-card .truck-rate{font-size:1.35rem;font-weight:800;color:#16a34a;margin:0 0 4px;}
+.truck-card .truck-base{font-size:.8rem;color:#64748b;margin:0 0 12px;}
+.truck-card .btn-book{display:inline-block;background:#1e40af;color:#fff;font-weight:700;padding:10px 24px;border-radius:8px;text-decoration:none;min-height:44px;}
+
+/* ============ HOW IT WORKS (2026-10-05) ============ */
+.how-it-works{margin:36px 0;}
+.hiw-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px;}
+.hiw-step{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:24px 18px;text-align:center;position:relative;}
+.hiw-num{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;background:#1e40af;color:#fff;font-size:1.4rem;font-weight:800;border-radius:50%;margin-bottom:12px;}
+.hiw-step h3{margin:0 0 8px;font-size:1.05rem;}
+.hiw-step p{margin:0;color:#475569;font-size:.92rem;}
+@media (max-width:640px){.hiw-steps{grid-template-columns:1fr;}}
+
+/* ============ COMPARISON TABLE (2026-10-05) ============ */
+.compare-table{width:100%;border-collapse:collapse;margin:20px 0;font-size:.95rem;}
+.compare-table th,.compare-table td{border:1px solid #e2e8f0;padding:12px;text-align:left;}
+.compare-table thead th{background:#1e3a8a;color:#fff;}
+.compare-table thead th.highlight{background:#16a34a;}
+.compare-table td.highlight{background:#f0fdf4;font-weight:700;}
+.compare-table .yes{color:#16a34a;font-weight:800;}
+.compare-table .no{color:#dc2626;font-weight:700;}
+.compare-wrap{overflow-x:auto;margin:24px 0;}
+@media (max-width:640px){.compare-table{font-size:.82rem;}.compare-table th,.compare-table td{padding:8px;}}
