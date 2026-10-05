@@ -7640,3 +7640,11 @@ input.input-error:focus,select.input-error:focus{outline:none;box-shadow:0 0 0 3
 .compare-table .no{color:#dc2626;font-weight:700;}
 .compare-wrap{overflow-x:auto;margin:24px 0;}
 @media (max-width:640px){.compare-table{font-size:.82rem;}.compare-table th,.compare-table td{padding:8px;}}
+
+/* ============ GOOGLE REVIEW CTA (2026-10-05) ============ */
+.review-cta-box{background:linear-gradient(135deg,#1e3a8a,#1e40af);border-radius:16px;padding:32px;text-align:center;color:#fff;margin:24px 0;}
+.review-cta-box h2{color:#fff;margin-top:0;}
+.review-cta-box p{color:#cbd5e1;max-width:560px;margin:0 auto 20px;}
+.review-cta-box .btn-review{display:inline-block;background:#fff;color:#1e40af;font-weight:800;padding:14px 32px;border-radius:50px;text-decoration:none;min-height:52px;box-shadow:0 4px 14px rgba(0,0,0,.2);}
+.review-cta-box .btn-review:hover{background:#f0fdf4;}
+@media (max-width:640px){.review-cta-box{padding:24px 16px;}}
