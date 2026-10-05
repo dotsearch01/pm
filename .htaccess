@@ -5,6 +5,18 @@ ErrorDocument 404 /404.html
   RewriteEngine On
   RewriteBase /
   
+  # 0a. Canonical host: 301 www -> non-www (consolidate ranking signals)
+  RewriteCond %{HTTP_HOST} ^www\.pooniamovers\.com$ [NC]
+  RewriteRule ^(.*)$ https://pooniamovers.com/$1 [R=301,L]
+  
+  # 0b. Force HTTPS sitewide
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+  
+  # 0c. Collapse /index.html and /index/ to homepage /
+  RewriteRule ^index\.html$ / [R=301,L]
+  RewriteRule ^index/?$ / [R=301,L]
+  
   # 1. 301 Redirect any external request for *.html to clean URL (except 404.html)
   RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
   RewriteCond %{REQUEST_URI} !/404\.html$ [NC]
@@ -12,6 +24,13 @@ ErrorDocument 404 /404.html
 
   # 2. 301 Redirect legacy /transport-services-in-jaipur to /jaipur-transport-services/
   RewriteRule ^transport-services-in-jaipur/?$ jaipur-transport-services/ [R=301,L]
+  
+  # 2b. Legacy URLs (previous site) -> new targets (preserve GSC equity)
+  RewriteRule ^fleet-network/?$ /jaipur-transport-services/ [R=301,L]
+  RewriteRule ^fleet-verification/?$ /about-us/ [R=301,L]
+  RewriteRule ^knowledge-center/?$ /about-us/ [R=301,L]
+  RewriteRule ^sitemap-index/?$ / [R=301,L]
+  RewriteRule ^services/reefer-trucks/?$ /truck-rental-jaipur/ [R=301,L]
 
   # 3. Internally map clean URL to .html or directory mirror
   RewriteCond %{REQUEST_FILENAME} !-f
@@ -19,10 +38,13 @@ ErrorDocument 404 /404.html
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^([^/]+)/?$ $1.html [L]
 
-  # 404 Fallback
+  # 3b. Block direct access to /core/ build tooling
+  RewriteRule ^core/ - [F,L]
+
+  # 404 Fallback: return real 404 status (ErrorDocument serves /404.html)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.*)$ /404.html [L]
+  RewriteRule ^ - [R=404,L]
 </IfModule>
 
 # 4. Enable Gzip / Brotli Compression (Core Web Vitals Boost)
@@ -46,4 +68,11 @@ ErrorDocument 404 /404.html
   ExpiresByType image/x-icon "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
   ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# 6. Keep XML sitemaps out of web search results
+<IfModule mod_headers.c>
+  <FilesMatch "\.xml$">
+    Header set X-Robots-Tag "noindex, follow"
+  </FilesMatch>
 </IfModule>

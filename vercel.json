@@ -3,6 +3,17 @@
   "trailingSlash": true,
   "redirects": [
     {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.pooniamovers.com"
+        }
+      ],
+      "destination": "https://pooniamovers.com/$1",
+      "permanent": true
+    },
+    {
       "source": "/transport-services-in-jaipur",
       "destination": "/jaipur-transport-services/",
       "permanent": true
@@ -10,6 +21,66 @@
     {
       "source": "/transport-services-in-jaipur/",
       "destination": "/jaipur-transport-services/",
+      "permanent": true
+    },
+    {
+      "source": "/fleet-network",
+      "destination": "/jaipur-transport-services/",
+      "permanent": true
+    },
+    {
+      "source": "/fleet-network/",
+      "destination": "/jaipur-transport-services/",
+      "permanent": true
+    },
+    {
+      "source": "/fleet-verification",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/fleet-verification/",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge-center",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/knowledge-center/",
+      "destination": "/about-us/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sitemap-index/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services/reefer-trucks",
+      "destination": "/truck-rental-jaipur/",
+      "permanent": true
+    },
+    {
+      "source": "/services/reefer-trucks/",
+      "destination": "/truck-rental-jaipur/",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index",
+      "destination": "/",
       "permanent": true
     }
   ],

@@ -59,4 +59,17 @@
 /truck-rental-jaipur     /truck-rental-jaipur/    301!
 /warehouse-storage-jaipur.html    /warehouse-storage-jaipur/    301!
 /warehouse-storage-jaipur     /warehouse-storage-jaipur/    301!
+# Legacy URLs (previous site) -> new targets (preserve GSC equity)
+/fleet-network/    /jaipur-transport-services/    301!
+/fleet-network     /jaipur-transport-services/    301!
+/fleet-verification/    /about-us/    301!
+/fleet-verification     /about-us/    301!
+/knowledge-center/    /about-us/    301!
+/knowledge-center     /about-us/    301!
+/sitemap-index/    /    301!
+/sitemap-index     /    301!
+/services/reefer-trucks/    /truck-rental-jaipur/    301!
+/services/reefer-trucks     /truck-rental-jaipur/    301!
+/index.html    /    301!
+/index    /    301!
 /*          /404.html   404

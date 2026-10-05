@@ -1,4 +1,39 @@
 # Netlify Configuration for Poonia Movers
+
+# Canonical host: www -> non-www
+[[redirects]]
+  from = "https://www.pooniamovers.com/*"
+  to = "https://pooniamovers.com/:splat"
+  status = 301
+  force = true
+
+# Legacy URLs (previous site) -> new targets
+[[redirects]]
+  from = "/fleet-network/*"
+  to = "/jaipur-transport-services/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/fleet-verification/*"
+  to = "/about-us/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/knowledge-center/*"
+  to = "/about-us/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/sitemap-index/*"
+  to = "/"
+  status = 301
+  force = true
+[[redirects]]
+  from = "/services/reefer-trucks/*"
+  to = "/truck-rental-jaipur/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/404.html"
