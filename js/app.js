@@ -822,3 +822,127 @@ function initConversionTracking() {
   });
 }
 document.addEventListener('DOMContentLoaded', initConversionTracking);
+
+/* 10. UI improvements: load bar, header search, form validation */
+(function(){
+  // --- Top loading progress bar ---
+  function initLoadBar(){
+    let bar = document.getElementById('page-load-bar');
+    if(!bar){ bar = document.createElement('div'); bar.id='page-load-bar'; document.body.prepend(bar); }
+    let w = 0;
+    const t = setInterval(()=>{ w = Math.min(w + 25, 90); bar.style.width = w + '%'; }, 120);
+    window.addEventListener('load', ()=>{
+      clearInterval(t); bar.style.width='100%';
+      setTimeout(()=>bar.classList.add('done'), 350);
+    });
+  }
+
+  // --- Header site search ---
+  const SEARCH_INDEX = [
+    {t:'Packers and Movers in Jaipur', u:'/', k:'packers movers home shifting best'},
+    {t:'House Shifting Services Jaipur', u:'/house-shifting-jaipur/', k:'house home shifting 1bhk 2bhk 3bhk'},
+    {t:'Office Relocation Jaipur', u:'/office-relocation-jaipur/', k:'office corporate commercial shifting'},
+    {t:'Car & Bike Transport Jaipur', u:'/car-bike-transportation-jaipur/', k:'car bike vehicle transport carrier'},
+    {t:'Part Load Transport Jaipur', u:'/part-load-transport-jaipur/', k:'part load parcel ptl per kg'},
+    {t:'Warehouse & Storage Jaipur', u:'/warehouse-storage-jaipur/', k:'warehouse storage godown'},
+    {t:'Truck Rental Jaipur (Tata Ace)', u:'/truck-rental-jaipur/', k:'truck rental tata ace tempo hire'},
+    {t:'Transport Service in Jaipur', u:'/jaipur-transport-services/', k:'transport goods truck booking ftl'},
+    {t:'All Moving Services', u:'/services/', k:'services packing moving'},
+    {t:'Industrial Relocation', u:'/industries/', k:'industrial factory b2b'},
+    {t:'Moving Guides Blog', u:'/blog/', k:'blog guides charges cost tips'},
+    {t:'Jaipur to Delhi Transport', u:'/jaipur-to-delhi-transport-packers/', k:'delhi ncr gurgaon noida faridabad'},
+    {t:'Jaipur to Mumbai Transport', u:'/jaipur-to-mumbai-transport-packers/', k:'mumbai maharashtra'},
+    {t:'Jaipur to Bangalore Transport', u:'/jaipur-to-bangalore-transport-packers/', k:'bangalore bengaluru karnataka'},
+    {t:'Jaipur to Ahmedabad Transport', u:'/jaipur-to-ahmedabad-transport-packers/', k:'ahmedabad gujarat'},
+    {t:'Jaipur to Pune Transport', u:'/jaipur-to-pune-transport-packers/', k:'pune maharashtra'},
+    {t:'Jaipur to Hyderabad Transport', u:'/jaipur-to-hyderabad-transport-packers/', k:'hyderabad telangana'},
+    {t:'Jaipur to Kolkata Transport', u:'/jaipur-to-kolkata-transport-packers/', k:'kolkata west bengal'},
+    {t:'Jaipur to Noida Transport', u:'/jaipur-to-noida-transport-packers/', k:'noida greater noida'},
+    {t:'Jaipur to Chandigarh Transport', u:'/jaipur-to-chandigarh-transport-packers/', k:'chandigarh punjab haryana'},
+    {t:'Jaipur to Lucknow Transport', u:'/jaipur-to-lucknow-transport-packers/', k:'lucknow uttar pradesh up'},
+    {t:'Jaipur to Udaipur Transport', u:'/jaipur-to-udaipur-transport-packers/', k:'udaipur rajasthan'},
+    {t:'Jaipur to Jodhpur Transport', u:'/jaipur-to-jodhpur-transport-packers/', k:'jodhpur rajasthan'},
+    {t:'Packers in Mansarovar', u:'/packers-movers-mansarovar-jaipur/', k:'mansarovar area local'},
+    {t:'Packers in Vaishali Nagar', u:'/packers-movers-vaishali-nagar-jaipur/', k:'vaishali nagar area'},
+    {t:'Packers in Malviya Nagar', u:'/packers-movers-malviya-nagar-jaipur/', k:'malviya nagar area'},
+    {t:'Packers in Jagatpura', u:'/packers-movers-jagatpura-jaipur/', k:'jagatpura area'},
+    {t:'Packers in Vidhyadhar Nagar', u:'/packers-movers-vidhyadhar-nagar-jaipur/', k:'vidhyadhar nagar area'},
+    {t:'Packers in Ajmer Road', u:'/packers-movers-ajmer-road-jaipur/', k:'ajmer road area'},
+    {t:'Packers in C-Scheme', u:'/packers-movers-c-scheme-jaipur/', k:'c-scheme area'},
+    {t:'Packers in Raja Park', u:'/packers-movers-raja-park-jaipur/', k:'raja park area'},
+    {t:'Packers in Sanganer', u:'/packers-movers-sanganer-jaipur/', k:'sanganer airport textile area'},
+    {t:'Packers in Pratap Nagar', u:'/packers-movers-pratap-nagar-jaipur/', k:'pratap nagar area'},
+    {t:'Guide: Packers Charges in Jaipur', u:'/blog/packers-and-movers-charges-in-jaipur/', k:'charges cost price rate'},
+    {t:'Guide: House Shifting Cost (1/2/3BHK)', u:'/blog/house-shifting-cost-in-jaipur-1bhk-2bhk-3bhk/', k:'cost 1bhk 2bhk 3bhk'},
+    {t:'Guide: How to Choose Movers', u:'/blog/how-to-choose-packers-and-movers-in-jaipur/', k:'choose select verify checklist'},
+    {t:'Guide: Car Transport Charges', u:'/blog/car-transportation-charges-in-jaipur/', k:'car transport charges'},
+    {t:'Guide: Bike Transport Cost', u:'/blog/bike-transport-cost-in-jaipur/', k:'bike transport parcel'},
+    {t:'Guide: Office Relocation Cost', u:'/blog/office-relocation-cost-in-jaipur/', k:'office cost'},
+    {t:'Guide: Truck Rental Rates', u:'/blog/truck-rental-rates-in-jaipur/', k:'truck rental rates'},
+    {t:'Guide: Warehouse Charges', u:'/blog/warehouse-storage-charges-in-jaipur/', k:'warehouse storage charges'},
+    {t:'Guide: Part Load Charges', u:'/blog/part-load-transport-charges-jaipur/', k:'part load charges per kg'},
+    {t:'Guide: Shifting Checklist', u:'/blog/house-shifting-checklist-india/', k:'checklist planner'},
+    {t:'Guide: Packing Tips', u:'/blog/packing-tips-house-shifting/', k:'packing tips'},
+    {t:'Guide: Transit Insurance', u:'/blog/transit-insurance-house-shifting-worth-it/', k:'insurance'},
+    {t:'Guide: Jaipur to Delhi Cost', u:'/blog/jaipur-to-delhi-packers-and-movers-charges/', k:'delhi cost'},
+    {t:'Guide: Jaipur to Mumbai Cost', u:'/blog/jaipur-to-mumbai-shifting-cost/', k:'mumbai cost'},
+    {t:'Guide: Fraud Red Flags', u:'/blog/packers-and-movers-frauds-red-flags/', k:'fraud scam fake'},
+    {t:'About Us', u:'/about-us/', k:'about company'},
+    {t:'Contact Us', u:'/contact-us/', k:'contact phone address'},
+  ];
+
+  function initHeaderSearch(){
+    const overlay = document.getElementById('site-search-overlay');
+    const input = document.getElementById('site-search-input');
+    const results = document.getElementById('site-search-results');
+    if(!overlay || !input || !results) return;
+    const openBtns = document.querySelectorAll('.header-search-btn');
+    const closeBtn = overlay.querySelector('.site-search-close');
+    const open = ()=>{ overlay.classList.add('open'); input.value=''; results.innerHTML='<div class="site-search-hint">Type to search 57 pages &amp; guides…</div>'; setTimeout(()=>input.focus(), 50); };
+    const close = ()=> overlay.classList.remove('open');
+    openBtns.forEach(b=>b.addEventListener('click', open));
+    if(closeBtn) closeBtn.addEventListener('click', close);
+    overlay.addEventListener('click', e=>{ if(e.target===overlay) close(); });
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') close(); });
+    input.addEventListener('input', ()=>{
+      const q = input.value.trim().toLowerCase();
+      if(q.length < 2){ results.innerHTML='<div class="site-search-hint">Type to search 57 pages &amp; guides…</div>'; return; }
+      const hits = SEARCH_INDEX.filter(r => r.t.toLowerCase().includes(q) || r.k.includes(q)).slice(0, 7);
+      results.innerHTML = hits.length
+        ? hits.map(h=>`<a class="site-search-item" href="${h.u}"><span>${h.t}</span><span class="go">Open →</span></a>`).join('')
+        : '<div class="site-search-hint">No matches. Try "charges", "delhi", or call <a href="tel:+918529206001">+91 85292 06001</a>.</div>';
+    });
+  }
+
+  // --- Form validation with clear errors ---
+  function initFormValidation(){
+    document.querySelectorAll('form').forEach(form=>{
+      form.addEventListener('submit', e=>{
+        let firstBad = null;
+        form.querySelectorAll('input[required], select[required], input[type="tel"]').forEach(inp=>{
+          const bad = !inp.value.trim() || (inp.type==='tel' && !/^[+\d][\d\s-]{7,15}$/.test(inp.value.trim()));
+          inp.classList.toggle('input-error', bad);
+          let msg = inp.parentElement.querySelector('.form-error-msg');
+          if(bad){
+            if(!msg){ msg = document.createElement('div'); msg.className='form-error-msg'; inp.parentElement.appendChild(msg); }
+            msg.textContent = inp.type==='tel' ? 'Please enter a valid 10-digit mobile number.' : 'This field is required.';
+            msg.classList.add('show');
+            inp.classList.add('shake'); setTimeout(()=>inp.classList.remove('shake'), 350);
+            if(!firstBad) firstBad = inp;
+          } else if(msg){ msg.classList.remove('show'); }
+        });
+        if(firstBad){ e.preventDefault(); firstBad.focus(); }
+      });
+      // clear error on typing
+      form.addEventListener('input', e=>{
+        if(e.target.classList.contains('input-error')){
+          e.target.classList.remove('input-error');
+          const msg = e.target.parentElement.querySelector('.form-error-msg');
+          if(msg) msg.classList.remove('show');
+        }
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', ()=>{ initLoadBar(); initHeaderSearch(); initFormValidation(); });
+})();

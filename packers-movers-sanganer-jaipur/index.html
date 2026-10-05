@@ -420,6 +420,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </nav>
 <!-- Header Action CTA -->
 <div class="header-actions">
+<button aria-label="Search website" class="header-search-btn" type="button">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-4.35-4.35M17 10.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"/></svg>
+</button>
 <a class="btn btn-primary header-cta-btn" href="tel:+918529206001" style="display:inline-flex; align-items:center; gap:6px; font-weight:700;"><i class="fa-solid fa-phone-volume"></i> +91 85292 06001</a>
 <button aria-label="Open mobile menu" class="mobile-toggle">
 <svg fill="none" stroke="currentColor" stroke-width="2.2" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
@@ -427,6 +430,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </header>
+<!-- Site search overlay -->
+<div id="site-search-overlay" role="dialog" aria-label="Site search">
+  <div class="site-search-box">
+    <div class="site-search-input-wrap">
+      <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="width:22px;height:22px;color:#6b7280;margin-left:8px;"><path d="M21 21l-4.35-4.35M17 10.5a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z"/></svg>
+      <input id="site-search-input" type="search" placeholder="Search services, routes, areas, guides…" autocomplete="off"/>
+      <button class="site-search-close" aria-label="Close search" type="button">×</button>
+    </div>
+    <div id="site-search-results"><div class="site-search-hint">Type to search 57 pages &amp; guides…</div></div>
+  </div>
+</div>
+
 <!-- HERO SECTION WITH BLUF & LOCAL LEAD FORM -->
 <section class="corridor-hero">
 <div class="container">
