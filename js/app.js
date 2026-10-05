@@ -804,3 +804,21 @@ function init404Search() {
 
 
 
+
+/* 9. Conversion tracking via GTM dataLayer (phone / WhatsApp / quote clicks) */
+function initConversionTracking() {
+  if (typeof window.dataLayer === 'undefined') { window.dataLayer = []; }
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (!a || !a.href) return;
+    const href = a.href;
+    const label = (a.textContent || '').trim().slice(0, 60);
+    const page = window.location.pathname;
+    if (href.indexOf('tel:') === 0) {
+      window.dataLayer.push({ event: 'phone_click', click_label: label, page_path: page });
+    } else if (href.indexOf('wa.me') !== -1 || href.indexOf('whatsapp') !== -1) {
+      window.dataLayer.push({ event: 'whatsapp_click', click_label: label, page_path: page });
+    }
+  });
+}
+document.addEventListener('DOMContentLoaded', initConversionTracking);
