@@ -7648,3 +7648,20 @@ input.input-error:focus,select.input-error:focus{outline:none;box-shadow:0 0 0 3
 .review-cta-box .btn-review{display:inline-block;background:#fff;color:#1e40af;font-weight:800;padding:14px 32px;border-radius:50px;text-decoration:none;min-height:52px;box-shadow:0 4px 14px rgba(0,0,0,.2);}
 .review-cta-box .btn-review:hover{background:#f0fdf4;}
 @media (max-width:640px){.review-cta-box{padding:24px 16px;}}
+
+/* ============ FREE QUOTE MODAL + FAB (2026-10-05) ============ */
+#pm-quote-fab{position:fixed;bottom:88px;right:18px;z-index:999;background:#16a34a;color:#fff;border:none;border-radius:50px;padding:14px 22px;font-size:1rem;font-weight:800;cursor:pointer;box-shadow:0 6px 20px rgba(22,163,74,.45);min-height:52px;}
+#pm-quote-fab:hover{background:#15803d;transform:translateY(-2px);}
+#pm-quote-modal{display:none;position:fixed;inset:0;z-index:1000;}
+#pm-quote-modal.open{display:block;}
+.pq-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.55);}
+.pq-box{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;border-radius:18px;padding:28px;width:min(480px,92vw);max-height:92vh;overflow-y:auto;}
+.pq-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.8rem;cursor:pointer;color:#64748b;min-width:44px;min-height:44px;}
+.pq-box h3{margin:0 0 6px;font-size:1.3rem;}
+.pq-sub{color:#64748b;font-size:.9rem;margin:0 0 16px;}
+#pq-form input,#pq-form select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;margin-bottom:12px;min-height:48px;box-sizing:border-box;}
+.pq-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.pq-submit{width:100%;padding:14px;background:#16a34a;color:#fff;border:none;border-radius:10px;font-size:1.05rem;font-weight:800;cursor:pointer;min-height:52px;}
+.pq-submit:hover{background:#15803d;}
+.pq-privacy{font-size:.78rem;color:#94a3b8;text-align:center;margin:10px 0 0;}
+@media (max-width:640px){.pq-row{grid-template-columns:1fr;}#pm-quote-fab{bottom:76px;right:12px;padding:12px 18px;}}
